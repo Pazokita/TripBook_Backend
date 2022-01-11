@@ -1,6 +1,7 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+require ('dotenv').config();
 
-const URI_BDD = 'mongodb+srv://admin:21Avr1986@cluster0.uamo1.mongodb.net/TripBook?retryWrites=true&w=majority';
+const URI_BDD = process.env.MONGO_URI;
 
 var options = {
     connectTimeoutMS: 5000,
